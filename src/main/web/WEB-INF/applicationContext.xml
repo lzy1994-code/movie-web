@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+    <import resource="spring-dubbo.xml"></import>
+
+    <!-- 扫描web相关的bean -->
+    <context:component-scan base-package="com.bw.movie"/>
+
+    <!-- 配置接口类 -->
+    <bean id="UserAction" class="com.bw.movie.action.UserAction"/>
+    <bean id="CinemaAction" class="com.bw.movie.action.CinemaAction"/>
+    <bean id="MovieAction" class="com.bw.movie.action.MovieAction"/>
+    <bean id="ToolAction" class="com.bw.movie.action.ToolAction"/>
+    <!-- 配置拦截器 -->
+    <!-- 直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求,如果没声明 bean则不做处理-->
+    <!--<mvc:interceptors>-->
+    <!--<mvc:interceptor>-->
+
+    <!--&lt;!&ndash; 只拦截指定接口的请求 &ndash;&gt;-->
+    <!--&lt;!&ndash;<mvc:mapping path="/book/findBookList.action"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash; 拦截所有请求 &ndash;&gt;-->
+    <!--<mvc:mapping path="/**"/>-->
+    <!--&lt;!&ndash; 不拦截findBookList.action请求 &ndash;&gt;-->
+    <!--&lt;!&ndash;<mvc:exclude-mapping path="/book/findBookList.action"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash; 自定义拦截器类路径 &ndash;&gt;-->
+    <!--<bean class="com.bw.interceptor.LoginInterceptor"></bean>-->
+
+    <!--</mvc:interceptor>-->
+    <!--</mvc:interceptors>-->
+</beans>
