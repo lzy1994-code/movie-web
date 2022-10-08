@@ -9,7 +9,6 @@ import com.bw.movie.rpc.pojo.MovieCommentReply;
 import com.bw.movie.rpc.pojo.Movies;
 import com.bw.movie.rpc.vo.*;
 import com.bw.movie.util.BwJsonHelper;
-import com.bw.movie.util.QRcodeUtil;
 import com.bw.movie.util.WebUtil;
 import com.bw.movie.vo.CommentGreatInfo;
 import com.bw.movie.vo.MovieCommentInfo;
@@ -299,7 +298,7 @@ public class MovieAction {
      * @param sign
      * @return
      */
-    @POST
+   /* @POST
     @Path(value = "/v1/verify/buyMovieTicket")
     @Produces("text/html;charset=UTF-8")
     public String buyMovieTicket(
@@ -330,7 +329,7 @@ public class MovieAction {
             logger.error("buyMovieTicket={}", e);
             return BwJsonHelper.returnJSON("1001", "网络异常");
         }
-    }
+    }*/
 
     /**
      * 支付
@@ -341,7 +340,7 @@ public class MovieAction {
      * @param request
      * @return
      */
-    @POST
+   /* @POST
     @Path(value = "/v1/verify/pay")
     @Produces("text/html;charset=UTF-8")
     public String pay(
@@ -362,7 +361,7 @@ public class MovieAction {
             logger.error("pay={}", e);
             return BwJsonHelper.returnJSON("1001", "网络异常");
         }
-    }
+    }*/
 
     /**
      * 查询电影评论
@@ -888,10 +887,10 @@ public class MovieAction {
     /**
      * 2.0 购票下单
      */
-    @POST
+   /* @POST
     @Path(value = "/v2/verify/buyMovieTickets")
-    @Produces("text/html;charset=UTF-8")
-    public String buyMovieTickets(@HeaderParam("userId") int userId, @FormParam("scheduleId") int scheduleId,
+    @Produces("text/html;charset=UTF-8")*/
+   /* public String buyMovieTickets(@HeaderParam("userId") int userId, @FormParam("scheduleId") int scheduleId,
                                   @FormParam("seat") String seat,
                                   @FormParam("sign") String sign) {
         logger.info("buyMovieTickets: userId={},scheduleId ={},seat={},sign={}",
@@ -929,7 +928,7 @@ public class MovieAction {
             logger.error("findSeatInfo:{}", e);
             return BwJsonHelper.returnJSON("1001", "网络异常");
         }
-    }
+    }*/
 
 
     /**
@@ -941,7 +940,7 @@ public class MovieAction {
      * @param request
      * @return
      */
-    @POST
+   /* @POST
     @Path(value = "/v2/verify/pay")
     @Produces("text/html;charset=UTF-8")
     public String payV2(
@@ -964,7 +963,7 @@ public class MovieAction {
             logger.error("pay={}", e);
             return BwJsonHelper.returnJSON("1001", "网络异常");
         }
-    }
+    }*/
 
     /**
      * 2.0 修改座位状态

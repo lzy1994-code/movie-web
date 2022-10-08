@@ -377,7 +377,7 @@ public class UserAction {
      * @param code
      * @return
      */
-    @POST
+/*    @POST
     @Path(value = "/v1/weChatBindingLogin")
     @Produces("text/html;charset=UTF-8")
     public String weChatBindingLogin(
@@ -395,7 +395,7 @@ public class UserAction {
             logger.error("weChatBindingLogin={}", e);
             return BwJsonHelper.returnJSON("1001", "网络异常,请联系管理员");
         }
-    }
+    }*/
 
     /**
      * 绑定微信账号
@@ -404,7 +404,7 @@ public class UserAction {
      * @param code
      * @return
      */
-    @POST
+  /*  @POST
     @Path(value = "/v1/verify/bindWeChat")
     @Produces("text/html;charset=UTF-8")
     public String bindWeChat(
@@ -424,7 +424,7 @@ public class UserAction {
             logger.error("bindWeChat={}", e);
             return BwJsonHelper.returnJSON("1001", "网络异常,请联系管理员");
         }
-    }
+    }*/
 
     /**
      * 是否绑定微信账号
@@ -432,7 +432,7 @@ public class UserAction {
      * @param userId
      * @return 1=绑定 2=未绑定
      */
-    @GET
+/*    @GET
     @Path(value = "/v1/verify/whetherToBindWeChat")
     @Produces("text/html;charset=UTF-8")
     public String whetherToBindWeChat(
@@ -445,7 +445,7 @@ public class UserAction {
             logger.error("whetherToBindWeChat={}", e);
             return BwJsonHelper.returnJSON("1001", "网络异常,请联系管理员");
         }
-    }
+    }*/
 
     /**
      * 2.0 发送邮箱验证码

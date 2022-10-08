@@ -9,9 +9,6 @@ import com.bw.movie.rpc.vo.RegionVo;
 import com.bw.movie.util.BwJsonHelper;
 import com.bw.movie.util.EncryptUtil;
 import com.bw.movie.util.WebUtil;
-import com.bw.pay.client.api.WeChatRpcService;
-import com.bw.pay.client.pojo.ProductConstants;
-import com.bw.pay.client.pojo.WeChatVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,9 +26,11 @@ public class ToolAction {
 
     @Resource
     private ToolRpcService toolRpcService;
+/*
 
     @Resource
     private WeChatRpcService weChatRpcService;
+*/
 
     /**
      * 意见反馈
@@ -213,7 +212,7 @@ public class ToolAction {
      * @param sign
      * @return
      */
-    @GET
+   /* @GET
     @Path(value = "/v1/wxShare")
     @Produces("text/html;charset=UTF-8")
     public String wxShare(
@@ -241,7 +240,7 @@ public class ToolAction {
             return BwJsonHelper.returnJSON("1001", "网络异常");
         }
 
-    }
+    }*/
 
     /**
      * 加密（供测试同学使用）
