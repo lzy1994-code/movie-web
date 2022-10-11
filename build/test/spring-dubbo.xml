@@ -9,7 +9,7 @@
     <dubbo:application name="movie-web-consumer"/>
 
     <!-- 使用Zookeeper集群注册中心暴露服务地址 -->
-    <dubbo:registry protocol="zookeeper" address="localhost:2181"/>
+    <dubbo:registry protocol="zookeeper" address="81.68.183.93:2181"/>
 
     <!-- 服务启动关闭对该服务提供者的接口是否正常的监测，也就是BarService是否可以正常调用不影响本应用的启动，当为true的时候如果该接口挂了，本应用就起不起来了
     <dubbo:reference interface="com.bw.dubbo.api.SysUserService" check="false" />
