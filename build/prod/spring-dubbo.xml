@@ -9,7 +9,7 @@
     <dubbo:application name="movie-web-consumer"/>
 
     <!-- 使用Zookeeper集群注册中心暴露服务地址 -->
-    <dubbo:registry protocol="zookeeper" address="172.17.111.184:2181,172.17.111.184:2182,172.17.111.184:2183"/>
+    <dubbo:registry protocol="zookeeper" address="localhost:2181"/>
 
     <!-- 服务启动关闭对该服务提供者的接口是否正常的监测，也就是BarService是否可以正常调用不影响本应用的启动，当为true的时候如果该接口挂了，本应用就起不起来了
     <dubbo:reference interface="com.bw.dubbo.api.SysUserService" check="false" />
@@ -24,5 +24,4 @@
     <dubbo:reference id="cinemaRpcService" interface="com.bw.movie.rpc.api.CinemaRpcService" init="false"/>
     <dubbo:reference id="toolRpcService" interface="com.bw.movie.rpc.api.ToolRpcService" init="false"/>
     <dubbo:reference id="userRpcService" interface="com.bw.movie.rpc.api.UserRpcService" init="false"/>
-    <dubbo:reference id="weChatRpcService" interface="com.bw.pay.client.api.WeChatRpcService" init="false"/>
 </beans>

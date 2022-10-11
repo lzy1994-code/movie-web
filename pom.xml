@@ -8,7 +8,7 @@
     <artifactId>movie-web</artifactId>
     <version>1.0</version>
 
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <dependencies>
 
@@ -199,14 +199,14 @@
                     <target>${java-version}</target>
                 </configuration>
             </plugin>
-            <!--<plugin>
+            <plugin>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.2</version>
+                <version>3.3.2</version>
                 <configuration>
                     <warSourceDirectory>src/main/web</warSourceDirectory>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
-            </plugin>-->
+            </plugin>
         </plugins>
 
     </build>
